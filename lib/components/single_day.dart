@@ -24,6 +24,47 @@ class _SingleDayState extends State<SingleDay> {
         decoration: BoxDecoration(color: color),
         child: GestureDetector(
             onTap: () {
+              showModalBottomSheet(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return Container(
+                        height: 500,
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text('Day $day'),
+                            ),
+
+                            ///TODO: Extract card out as widget that is created on first page as a loop
+                            const Card(
+                              child: ListTile(
+                                title: Text('Test'),
+                              ),
+                            ),
+                            const Card(
+                              child: ListTile(
+                                title: Text('Test'),
+                              ),
+                            ),
+                            const Card(
+                              child: ListTile(
+                                title: Text('Test'),
+                              ),
+                            ),
+                            const Card(
+                              child: ListTile(
+                                title: Text('Test'),
+                              ),
+                            ),
+                            const Card(
+                              child: ListTile(
+                                title: Text('Test'),
+                              ),
+                            ),
+                          ],
+                        ));
+                  });
               print('Tap');
               setState(() {
                 color = Colors.green;
