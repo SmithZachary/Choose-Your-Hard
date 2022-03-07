@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../presentation/colors.dart';
+
 class SingleDay extends StatefulWidget {
   SingleDay({Key? key, required this.dayIndex}) : super(key: key);
   int dayIndex;
@@ -12,7 +14,7 @@ class _SingleDayState extends State<SingleDay> {
   @override
   void initState() {
     super.initState();
-    color = Colors.white;
+    color = AppColorThemes.light.primary;
   }
 
   Widget build(BuildContext context) {
